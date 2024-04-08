@@ -1,0 +1,138 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- <div class="menu-btn">
+      <i class="fas fa-bars fa-2x"></i>
+    </div> -->
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="nav-main">
+        <!-- Brand -->
+        <img src="/brand.png" alt="TechNews Logo" class="nav-brand" />
+        <!-- Left Nav -->
+        <ul class="nav-menu">
+          <li>
+            <a href="#">Web Development</a>
+          </li>
+          <li>
+            <a href="#">Blockchain</a>
+          </li>
+          <li>
+            <a href="#">Machine Learning</a>
+          </li>
+          <li>
+            <a href="#">Artificial Intelligence</a>
+          </li>
+          <li>
+            <a href="#">Quantum Computing</a>
+          </li>
+          <li>
+            <a href="#">Startup</a>
+          </li>
+          <li>
+            <a href="#">Cryptocurrencies</a>
+          </li>
+          <li>
+            <a href="#">More</a>
+          </li>
+        </ul>
+
+        <!-- Right Nav -->
+        <ul class="nav-menu-right">
+          <li>
+            <a href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+    </div>
+  </body>
+</html>
+<style is:global>
+  body {
+    font-family: "Oswald", sans-serif;
+    background-color: #000000;
+    /* Pattern from https://www.heropatterns.com/ */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #1e272e;
+    color: #fff;
+    font-size: 16px;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  /* Navigation */
+  .nav-main {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+  }
+  .nav-brand {
+    width: 50px;
+  }
+
+  /* Navbar Left */
+  .nav-main ul {
+    display: flex;
+  }
+
+  .nav-main ul li {
+    padding: 10px;
+  }
+
+  .nav-main ul li a {
+    padding: 2px;
+  }
+
+  .nav-main ul li a:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+</style>
